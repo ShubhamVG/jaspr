@@ -1,7 +1,7 @@
 {
   "name": "Jaspr",
   "description": "A web project template for Jaspr",
-  "icon": "https://github.com/schultek/jaspr/blob/main/assets/jaspr_icon.png",
+  "icon": "https://raw.githubusercontent.com/schultek/jaspr/be627882b53669c525bac7d966ed89baef2049cf/assets/jaspr_icon.png",
   "categories": [
     "Jaspr",
     "Web app"
