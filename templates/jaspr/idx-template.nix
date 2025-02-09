@@ -1,4 +1,6 @@
 { pkgs, mode ? "static", routing ? "none", flutter ? "false", plugins ? "false", ... }: {
+  # Which nixpkgs channel to use.
+  channel = "unstable" # To support latest dart versions.
   packages = [
     pkgs.dart
     pkgs.flutter
