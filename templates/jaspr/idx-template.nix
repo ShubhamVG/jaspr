@@ -7,14 +7,11 @@
     # Install Dart
     wget https://storage.googleapis.com/dart-archive/channels/stable/release/3.5.4/sdk/dartsdk-linux-x64-release.zip
     unzip dartsdk-linux-x64-release.zip
-    mv dart-sdk ~/.dart-sdk
-    echo "export PATH=\"$PATH\":\"$HOME/.dart-sdk/bin\" ">> ~/.bashrc
-    source ~/.bashrc
     # Install Jaspr
-    dart --version
-    dart pub global activate jaspr_cli
+    ./dart-sdk/bin/dart --version
+    ./dart-sdk/bin/dart pub global activate jaspr_cli
     # Create project
-    jaspr create --mode=${mode} --routing=${routing} \
+    ./dart-sdk/bin/dart pub global run jaspr_cli:jaspr create --mode=${mode} --routing=${routing} \
       --flutter=${if flutter == "true" then "embedded" else if plugins == "true" then "plugins-only" else "none"} \
       --backend=none "$WS_NAME"
     chmod -R +w "$WS_NAME"
