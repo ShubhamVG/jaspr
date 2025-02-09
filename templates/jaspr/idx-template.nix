@@ -5,10 +5,12 @@
     pkgs.dart
     pkgs.flutter
   ];
+  env = {
+    PATH = ["$HOME/.pub-cache/bin"];
+  };
   bootstrap = ''    
-    dart pub global activate jaspr_cli '>=0.17.0 <=1.0.0'
-    echo "export PATH=\"$PATH\":\"$HOME/.pub-cache/bin\" ">> ~/.bashrc
-    source ~/.bashrc
+    dart --version
+    dart pub global activate jaspr_cli
     jaspr create --mode=${mode} --routing=${routing} \
       --flutter=${if flutter == "true" then "embedded" else if plugins == "true" then "plugins-only" else "none"} \
       --backend=none "$WS_NAME"
