@@ -1,4 +1,7 @@
 { pkgs, mode ? "static", routing ? "none", flutter ? "false", plugins ? "false", ... }: {
+  packages = [
+    pkgs.wget
+  ];
   bootstrap = ''   
     # Install Dart
     wget https://storage.googleapis.com/dart-archive/channels/stable/release/3.5.4/sdk/dartsdk-linux-x64-release.zip
