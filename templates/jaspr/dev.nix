@@ -18,6 +18,7 @@
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
+        install-jaspr = "dart pub global activate jaspr_cli"
         pub-get = "dart pub get";
 
         default.openFiles = [
