@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   # Which nixpkgs channel to use.
-  channel = "unstable"; # To support latest dart versions.
+  channel = "stable-24.11"; # To support latest dart versions.
   # Use https://search.nixos.org/packages to find packages
   packages = [
     pkgs.dart
