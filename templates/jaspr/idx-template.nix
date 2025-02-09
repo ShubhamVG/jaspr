@@ -4,7 +4,7 @@
     pkgs.flutter
   ];
   bootstrap = ''    
-    dart pub global activate jaspr_cli
+    dart pub global activate jaspr_cli '>=0.17.0 <=1.0.0'
     echo "export PATH=\"$PATH\":\"$HOME/.pub-cache/bin\" ">> ~/.bashrc
     source ~/.bashrc
     jaspr create --mode=${mode} --routing=${routing} \
