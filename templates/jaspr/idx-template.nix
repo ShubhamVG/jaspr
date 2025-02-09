@@ -10,12 +10,12 @@
     ls
     ls dart-sdk
     ls dart-sdk/bin
-    chmod +x ./dart-sdk/bin/dart
+    chmod +x dart-sdk/bin/dart
     # Install Jaspr
-    ./dart-sdk/bin/dart --version
-    ./dart-sdk/bin/dart pub global activate jaspr_cli
+    dart-sdk/bin/dart --version
+    dart-sdk/bin/dart pub global activate jaspr_cli
     # Create project
-    ./dart-sdk/bin/dart pub global run jaspr_cli:jaspr create --mode=${mode} --routing=${routing} \
+    dart-sdk/bin/dart pub global run jaspr_cli:jaspr create --mode=${mode} --routing=${routing} \
       --flutter=${if flutter == "true" then "embedded" else if plugins == "true" then "plugins-only" else "none"} \
       --backend=none "$WS_NAME"
     chmod -R +w "$WS_NAME"
