@@ -1,6 +1,7 @@
 { pkgs, mode ? "static", routing ? "none", flutter ? "false", plugins ? "false", ... }: {
   packages = [
     pkgs.wget
+    pkgs.unzip
   ];
   bootstrap = ''   
     # Install Dart
