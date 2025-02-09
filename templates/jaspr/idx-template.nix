@@ -6,7 +6,7 @@
   bootstrap = ''    
     dart pub global activate jaspr_cli
     jaspr create --mode=${mode} --routing=${routing} \
-      --flutter=${if flutter then "embedded" else if plugins then "plugins-only" else "none"} \
+      --flutter=${if flutter == "true" then "embedded" else if plugins == "true" then "plugins-only" else "none"} \
       --backend=none "$WS_NAME"
     chmod -R +w "$WS_NAME"
     mv "$WS_NAME" "$out"
