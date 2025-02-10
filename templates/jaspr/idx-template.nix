@@ -2,11 +2,13 @@
   packages = [
     pkgs.wget
     pkgs.unzip
+    pkgs.patchelf
   ];
   bootstrap = ''   
     # Install Dart
     wget https://storage.googleapis.com/dart-archive/channels/stable/release/3.5.4/sdk/dartsdk-linux-x64-release.zip
     unzip dartsdk-linux-x64-release.zip
+    patchelf --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" dart-sdk/bin/dart
     chmod +x "dart-sdk/bin/dart"
     # Install Jaspr
     dart-sdk/bin/dart --version
